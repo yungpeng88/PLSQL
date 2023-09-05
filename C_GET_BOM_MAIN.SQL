@@ -4760,13 +4760,13 @@ EXCEPTION
       o_msg := o_msg || SUBSTR (SQLERRM, 1, 200) || CHR (13) || CHR (10);
 END;
 
-CREATE OR REPLACE PROCEDURE sfis1.c_getbom_xxxx (q_sn       IN     VARCHAR2,
+CREATE OR REPLACE PROCEDURE sfis1.c_getbom_SMALLB (q_sn       IN     VARCHAR2,
                                                  o_status      OUT VARCHAR2,
                                                  o_msg         OUT VARCHAR2,
                                                  content1      OUT VARCHAR2)
 AS
    c_count NUMBER;
-   q_fprint VARCHAR2 (30);
+   q_kpn VARCHAR2 (30);
 BEGIN
    content1 := NULL;
    --GET SMALL/B
